@@ -1,11 +1,12 @@
-import React, { useReducer, useState } from "react"
-import './MachineModal.css'
-import MachineModal from "./MachineModal"
-import MCard from "./MCard"
+import React, { useState } from "react"
+import './ShellCommandContainer.css'
+
+import MachineModal from "../MachineModal/MachineModal"
+import MCard from "../MCard/MCard"
 
 function ShellCommandContainer() {
 
-
+    // set default machines
     const [machines, setMachines] = useState([
         {
             hostname: "137.184.197.58",
@@ -28,24 +29,20 @@ function ShellCommandContainer() {
 
     function handleCloseModal() {
         setModalOpen(false)
-
     }
+
     function handleSaveMachine(e) {
-
-        console.log(e)
-
         setMachines([...machines, {
             hostname: e.hostname,
             username: e.username,
             password: e.password
         }])
-
     }
 
     return (
-        <div className="App">
+        <div className="container">
             <h2>Shell Command Runner</h2>
-            <button onClick={(e) => setModalOpen(true)}>Add New Machine</button>
+            <button className="container-button" onClick={(e) => setModalOpen(true)}>Add New Machine</button>
 
             <MachineModal
                 isOpen={modalOpen}
@@ -53,12 +50,15 @@ function ShellCommandContainer() {
                 onSave={handleSaveMachine}
             ></MachineModal>
 
-
-            {machines.map((machine) => {
-
-                return <MCard machine={machine}></MCard>
-
-            })}
+            <ul className="machine-list">
+                {machines.map((machine) => {
+                    return (
+                        <li key={machine.username}>
+                            <MCard machine={machine}></MCard>
+                        </li>
+                    )
+                })}
+            </ul>
 
 
         </div>

@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
-import ShellCommandContainer from './Components/ShellCommandContainer';
+import ShellCommandContainer from './Components/ShellCommandContainer/ShellCommandContainer';
 
 function App() {
-
-  return <>
-  
-    <ShellCommandContainer/>
-  </>
-  
+  return <ShellCommandContainer/>
 }
 
 export default App;

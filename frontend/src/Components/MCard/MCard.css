@@ -26,7 +26,10 @@
     min-width: 50 px;
     font-family: 'Courier New', Courier, monospace;
 }
-.card-buttpn{
+.card-button{
     font-size: 1em;
     color: #555;
+}
+.card-output{
+    font-family: 'Courier New', Courier, monospace;
 }

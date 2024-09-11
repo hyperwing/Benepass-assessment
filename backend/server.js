@@ -1,8 +1,11 @@
 const express = require('express');
 const { Client } = require('ssh2');
+const cors = require('cors')
 const app = express();
 const port = 3001;
 
+
+app.use(cors()); // Enable CORS
 app.use(express.json());
 
 
