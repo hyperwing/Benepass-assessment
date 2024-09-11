@@ -39,9 +39,9 @@ function MCard({ machine }) {
                 className='card-command'
                 onChange={(e) => setCommand(e.target.value)}
                 value={command}
-                placeholder='Enter Command' 
+                placeholder=' Enter Command' 
                 type="text"/>
-            <button onClick={submitCommand} className='card-button'>Submit</button>
+            <button onClick={submitCommand} className='card-button'>submit</button>
             <p className={error}>{output}</p>
         </div>
     );

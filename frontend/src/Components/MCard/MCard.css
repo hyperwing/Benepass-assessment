@@ -1,16 +1,17 @@
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid #103D50;
     width:max-content;
     border-radius: 8px;
     padding: 16px;
     margin: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
+    background-color: #6E92A1;
 }
 
 .card:hover {
     /* transform: scale(1.05); */
-    background-color: #f5f7fa;
+    background-color: #103D50;
 }
 
 .card-title {
@@ -27,7 +28,10 @@
     margin-right: 5px;;
     font-size: 1em;
     font-family: 'Courier New', Courier, monospace;
+    color: #1f1d1d;
+    border: #103D50;
     border-radius: 8px; /* Rounded corners */
+    background-color: #467386;
 
 }
 .card-button{

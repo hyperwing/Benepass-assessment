@@ -1,8 +1,11 @@
 import React, {  } from 'react';
 import ShellCommandContainer from './Components/ShellCommandContainer/ShellCommandContainer';
+import './App.css'
 
 function App() {
-  return <ShellCommandContainer/>
+  return <div className='App'>
+    <ShellCommandContainer/>
+  </div>
 }
 
 export default App;
