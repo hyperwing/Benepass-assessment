@@ -5,11 +5,17 @@
 }
 
 .container-button {
-    padding: 6px;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
     margin: 16px;
 }
+.container-button:hover {
+    background-color: #bbc1bc; /* Darker green on hover */
+}
+
 .machine-list{
     list-style-type:none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }

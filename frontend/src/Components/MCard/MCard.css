@@ -24,12 +24,23 @@
 }
 .card-command{
     min-width: 50 px;
+    margin-right: 5px;;
+    font-size: 1em;
     font-family: 'Courier New', Courier, monospace;
+    border-radius: 8px; /* Rounded corners */
+
 }
 .card-button{
     font-size: 1em;
     color: #555;
+    border-radius: 8px; /* Rounded corners */
+
 }
 .card-output{
     font-family: 'Courier New', Courier, monospace;
+    color: #1f1d1d;
+}
+.card-output-error{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: red;
 }

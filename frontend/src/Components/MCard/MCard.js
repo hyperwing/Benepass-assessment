@@ -6,13 +6,12 @@ function MCard({ machine }) {
 
     const [output, setOutput] = useState('')
     const [command, setCommand] = useState('')
+    const [error, setError] = useState("card-output")
 
     const submitCommandURL = `${process.env.REACT_APP_SHELL_COMMAND_API_URL}${process.env.REACT_APP_COMMAND_SHELL_ENDPOINT}`
 
-
     async function submitCommand() {
 
-        // username, password, hostname, command 
         const params = {
             username: machine.username,
             password: machine.password,
@@ -22,12 +21,12 @@ function MCard({ machine }) {
 
 
         try {
-            // const response = await axios.get('http://localhost:3001/health');
             const response = await axios.post(submitCommandURL, params)
             setOutput(response.data);
             setCommand("")
         } catch (error) {
-            setOutput('Error running command');
+            setError("card-output-error")
+            setOutput('Error:' + error );
         }
 
     }
@@ -43,7 +42,7 @@ function MCard({ machine }) {
                 placeholder='Enter Command' 
                 type="text"/>
             <button onClick={submitCommand} className='card-button'>Submit</button>
-            <p className="card-output">{output}</p>
+            <p className={error}>{output}</p>
         </div>
     );
 }
