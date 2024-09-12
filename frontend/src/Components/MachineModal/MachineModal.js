@@ -52,18 +52,21 @@ function MachineModal({ isOpen, onClose, onSave }) {
                         name="hostname"
                         onChange={handleChange}
                         placeholder="Hostname"
+                        required={true}
                     />
                     <input
                         type="username"
                         name="username"
                         onChange={handleChange}
                         placeholder="Username"
+                        required={true}
                     />
                     <input
                         type="password"
                         name="password"
                         onChange={handleChange}
                         placeholder="Password"
+                        required={true}
                     />
 
 

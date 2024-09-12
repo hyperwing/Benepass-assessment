@@ -70,7 +70,7 @@ function ShellCommandContainer() {
 
     return (
         <div className="container">
-            <h2>Shell Command Runner</h2>
+            <h2 className="container-title">Shell Command Runner</h2>
             <button className="container-button" onClick={(e) => setModalOpen(true)}>Add New Machine 🖥️</button>
             <button className="container-button" onClick={runHealthCheck}>Run Health Check on Benepass Servers ❤️</button>
 
