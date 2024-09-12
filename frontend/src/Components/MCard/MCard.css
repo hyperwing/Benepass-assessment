@@ -7,6 +7,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     background-color: #6E92A1;
+    position: relative;
 }
 
 .card:hover {
@@ -47,4 +48,17 @@
 .card-output-error{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: red;
+}
+.card-delete{
+    position: absolute;
+    top:8px;
+    right: 8px;
+    justify-content: right;
+    background-color: #467386;
+    border: #467386;
+    border-radius: 8px;
+    padding: 5px;
+}
+.card-delete:hover{
+    background-color: #022f42;
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './MCard.css';
 import axios from 'axios'
 
-function MCard({ machine }) {
+function MCard({ machine, onDelete }) {
 
     const [output, setOutput] = useState('')
     const [command, setCommand] = useState('')
@@ -33,6 +33,8 @@ function MCard({ machine }) {
 
     return (
         <div className="card">
+            <button onClick={(e)=>onDelete(machine)} className='card-delete'>❌</button>
+
             <h2 className="card-name">{machine.hostname}</h2>
             <p className="card-content">User: {machine.username}</p>
             <input

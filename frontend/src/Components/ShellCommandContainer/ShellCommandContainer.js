@@ -10,16 +10,19 @@ function ShellCommandContainer() {
     // set default machines
     const [machines, setMachines] = useState([
         {
+            index:0,
             hostname: "137.184.197.58",
             username: "test1",
             password: "test1-password"
         },
         {
+            index:1,
             hostname: "137.184.197.58",
             username: "test2",
             password: "test2-password"
         },
         {
+            index:2,
             hostname: "137.184.197.58",
             username: "test3",
             password: "test3-password"
@@ -28,6 +31,7 @@ function ShellCommandContainer() {
 
     const [modalOpen, setModalOpen] = useState(false)
     const [healthCheck, setHealthCheck] = useState("")
+    const [index, setIndex] = useState(3)
     const healthCheckURL = `${process.env.REACT_APP_SHELL_COMMAND_API_URL}${process.env.REACT_APP_HEALTH_ENDPOINT}`
 
     function handleCloseModal() {
@@ -38,8 +42,21 @@ function ShellCommandContainer() {
         setMachines([...machines, {
             hostname: e.hostname,
             username: e.username,
-            password: e.password
+            password: e.password,
+            index: index
         }])
+        setIndex(index + 1)
+    }
+
+    function handleDeleteMachine(e){
+        console.log(e)
+
+        setMachines(machines.filter((machine)=>{
+            return e.index !== machine.index
+        }))
+
+
+
     }
     async function runHealthCheck(){
         try {
@@ -68,8 +85,11 @@ function ShellCommandContainer() {
             <ul className="machine-list">
                 {machines.map((machine) => {
                     return (
-                        <li key={machine.username}>
-                            <MCard machine={machine}></MCard>
+                        <li key={machine.index}>
+                            <MCard 
+                                machine={machine}                 
+                                onDelete={handleDeleteMachine}
+                            ></MCard>
                         </li>
                     )
                 })}
