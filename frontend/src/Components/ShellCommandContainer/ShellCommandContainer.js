@@ -10,19 +10,19 @@ function ShellCommandContainer() {
     // set default machines
     const [machines, setMachines] = useState([
         {
-            index:0,
+            index: 0,
             hostname: "137.184.197.58",
             username: "test1",
             password: "test1-password"
         },
         {
-            index:1,
+            index: 1,
             hostname: "137.184.197.58",
             username: "test2",
             password: "test2-password"
         },
         {
-            index:2,
+            index: 2,
             hostname: "137.184.197.58",
             username: "test3",
             password: "test3-password"
@@ -48,23 +48,23 @@ function ShellCommandContainer() {
         setIndex(index + 1)
     }
 
-    function handleDeleteMachine(e){
+    function handleDeleteMachine(e) {
         console.log(e)
 
-        setMachines(machines.filter((machine)=>{
+        setMachines(machines.filter((machine) => {
             return e.index !== machine.index
         }))
 
 
 
     }
-    async function runHealthCheck(){
+    async function runHealthCheck() {
         try {
             const response = await axios.get(healthCheckURL)
             setHealthCheck(response.data);
         } catch (error) {
             setHealthCheck(error)
-            
+
         }
     }
 
@@ -86,8 +86,8 @@ function ShellCommandContainer() {
                 {machines.map((machine) => {
                     return (
                         <li key={machine.index}>
-                            <MCard 
-                                machine={machine}                 
+                            <MCard
+                                machine={machine}
                                 onDelete={handleDeleteMachine}
                             ></MCard>
                         </li>

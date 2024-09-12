@@ -1,6 +1,6 @@
 .card {
     border: 1px solid #103D50;
-    width:max-content;
+    width: max-content;
     border-radius: 8px;
     padding: 16px;
     margin: 16px;
@@ -24,34 +24,42 @@
     font-size: 1em;
     color: #555;
 }
-.card-command{
+
+.card-command {
     min-width: 50 px;
-    margin-right: 5px;;
+    margin-right: 5px;
+    ;
     font-size: 1em;
     font-family: 'Courier New', Courier, monospace;
     color: #1f1d1d;
     border: #103D50;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
+    /* Rounded corners */
     background-color: #467386;
 
 }
-.card-button{
+
+.card-button {
     font-size: 1em;
     color: #555;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
+    /* Rounded corners */
 
 }
-.card-output{
+
+.card-output {
     font-family: 'Courier New', Courier, monospace;
     color: #1f1d1d;
 }
-.card-output-error{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+.card-output-error {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: red;
 }
-.card-delete{
+
+.card-delete {
     position: absolute;
-    top:8px;
+    top: 8px;
     right: 8px;
     justify-content: right;
     background-color: #467386;
@@ -59,6 +67,7 @@
     border-radius: 8px;
     padding: 5px;
 }
-.card-delete:hover{
+
+.card-delete:hover {
     background-color: #022f42;
 }

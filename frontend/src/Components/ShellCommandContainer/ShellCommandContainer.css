@@ -8,15 +8,19 @@
 }
 
 .container-button {
-    border-radius: 8px; /* Rounded corners */
-    padding: 10px 20px; /* Padding */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 10px 20px;
+    /* Padding */
     margin: 16px;
 }
+
 .container-button:hover {
-    background-color: #bbc1bc; /* Darker green on hover */
+    background-color: #bbc1bc;
+    /* Darker green on hover */
 }
 
-.container-title{
+.container-title {
     background-color: #6E92A1;
     border-radius: 8px;
     padding: 16px;
@@ -24,8 +28,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.machine-list{
-    list-style-type:none;
+.machine-list {
+    list-style-type: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
