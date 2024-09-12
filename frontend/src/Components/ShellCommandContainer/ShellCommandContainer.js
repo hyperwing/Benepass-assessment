@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import './ShellCommandContainer.css'
-import axios from "axios"
 
 import MachineModal from "../MachineModal/MachineModal"
 import MCard from "../MCard/MCard"
@@ -30,9 +29,7 @@ function ShellCommandContainer() {
     ])
 
     const [modalOpen, setModalOpen] = useState(false)
-    const [healthCheck, setHealthCheck] = useState("")
     const [index, setIndex] = useState(3)
-    const healthCheckURL = `${process.env.REACT_APP_SHELL_COMMAND_API_URL}${process.env.REACT_APP_HEALTH_ENDPOINT}`
 
     function handleCloseModal() {
         setModalOpen(false)
@@ -54,27 +51,18 @@ function ShellCommandContainer() {
         setMachines(machines.filter((machine) => {
             return e.index !== machine.index
         }))
-
-
-
-    }
-    async function runHealthCheck() {
-        try {
-            const response = await axios.get(healthCheckURL)
-            setHealthCheck(response.data);
-        } catch (error) {
-            setHealthCheck(error)
-
-        }
     }
 
     return (
         <div className="container">
             <h2 className="container-title">Shell Command Runner</h2>
-            <button className="container-button" onClick={(e) => setModalOpen(true)}>Add New Machine 🖥️</button>
-            <button className="container-button" onClick={runHealthCheck}>Run Health Check on Benepass Servers ❤️</button>
-
-            <h3>{healthCheck}</h3>
+            
+            <button 
+                className="container-button" 
+                onClick={(e) => setModalOpen(true)}>
+                Add New Machine 🖥️
+            </button>
+            
 
             <MachineModal
                 isOpen={modalOpen}

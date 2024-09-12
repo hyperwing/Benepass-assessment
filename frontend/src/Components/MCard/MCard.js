@@ -44,7 +44,8 @@ function MCard({ machine, onDelete }) {
                 placeholder=' Enter Command' 
                 type="text"/>
             <button onClick={submitCommand} className='card-button'>submit</button>
-            <p className={error}>{output}</p>
+            <br/>
+            <textarea readOnly={true} value={output} className={error}></textarea>
         </div>
     );
 }

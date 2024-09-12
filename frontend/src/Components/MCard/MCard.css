@@ -50,10 +50,18 @@
 .card-output {
     font-family: 'Courier New', Courier, monospace;
     color: #1f1d1d;
+    background-color: #467386;
+    margin: 20px;
+    height: 100px;
+    text-wrap:wrap;
 }
 
 .card-output-error {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #467386;
+    margin: 20px;
+    height: 100px;
+    text-wrap:wrap;
     color: red;
 }
 
