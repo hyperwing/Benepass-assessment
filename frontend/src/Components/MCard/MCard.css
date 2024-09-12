@@ -40,17 +40,22 @@
 }
 
 .card-button {
-    font-size: 1em;
-    color: #555;
+    font-size: 12px;
+    color: #f4f4f4;
     border-radius: 8px;
-    /* Rounded corners */
-
+    background-color: #467386;
+    border: #467386;
+    padding: 5px;
+}
+.card-button:hover{
+    background-color: #022f42;
 }
 
 .card-output {
     font-family: 'Courier New', Courier, monospace;
     color: #1f1d1d;
     background-color: #467386;
+    min-width: 600px;
     margin: 20px;
     height: 100px;
     text-wrap:wrap;

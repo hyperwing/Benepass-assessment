@@ -22,7 +22,8 @@ function MCard({ machine, onDelete }) {
 
         try {
             const response = await axios.post(submitCommandURL, params)
-            setOutput(response.data);
+            const outputPrefix = machine.username + "@" + machine.hostname + ":~$ " + command + "\n"
+            setOutput(output.concat(outputPrefix + response.data));
             setCommand("")
         } catch (error) {
             setError("card-output-error")
